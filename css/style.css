@@ -1,0 +1,12 @@
+.end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.end .h2{
+    margin: 20px auto 100px;
+}
+.end .cta-button{
+    margin-top: 110px;
+}
