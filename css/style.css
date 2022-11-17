@@ -1,3 +1,208 @@
+
+/* daily  */
+.daily>p:nth-child(3){
+    margin: 20px 0 30px;
+}
+.head-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.head-date >p,.end .h4{
+    font-weight: 600;
+}
+.head-date>button{
+    padding: 6px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-white);
+}
+.daily .list-title,.daily .list-ct{
+    display: flex;
+    gap: 13px;
+}
+.daily .list-ct{
+    margin-top: 12px;
+}
+.daily .list-title h2{
+    padding: 15px;
+    background: rgba(55, 55, 55, 0.05);
+    flex: 0 1 270px;
+}
+.list-ct>div{
+    flex: 0 1 270px;
+    padding: 10px 10px 0;
+    background-color:  rgba(55, 55, 55, 0.05);
+    height:540px;
+}
+.list-ct .card{
+    /* width: 250px; */
+    /* height: 138px; */
+    background: var(--primary-white);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    padding: 15px;
+}
+.card .card-inner {
+    padding-left: 20px;
+    border-left: 4px solid  #C3CBFF;
+
+   
+}
+.card .card-inner .date{
+    margin: 10px 0 20px 0;
+    color: rgba(55, 55, 55, 0.6);;
+}
+.card-inner .under{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.under .hour{
+    color: var(--primary-white);
+    padding: 2px 10px;
+    background: rgba(55, 55, 55, 0.6);
+    border-radius: 20px;
+}
+.under .under-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.under-right >p{
+    color: rgba(55, 55, 55, 0.6);
+}
+.daily-btn{
+    position: absolute;
+}
+/* review  */
+.review>p{
+    margin: 10px 0 35px;
+}
+.review-paper
+{
+    max-width: 996px;
+    margin: 0 auto;
+    border: 1px solid rgba(55, 55, 55, 0.2);
+    border-bottom: unset;
+    border-radius: 30px 30px 0px 0px;
+    padding: 40px 40px 0;
+}
+.review-paper .review-top{
+    border-bottom: 1px solid rgba(55, 55, 55, 0.2);
+}
+.review-top .attend{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0 20px;
+}
+.attend span{
+    border-radius: 200px;
+    padding: 4.5px 7.5px;
+}
+.attend span:nth-child(2){
+    background: #C3CBFF;
+
+}
+.attend span:nth-child(3){
+    background: #FEF371;
+
+}
+.attend span:nth-child(4){
+    background: #F9DAFE;
+
+}
+.review-bot
+{
+    margin-top: 20px;
+}
+.review-bot h3{
+    margin-bottom: 5px;
+}
+.review-bot img{
+    margin: 15px 0 30px;
+}
+.review-bot>p{
+    color: #37373799;
+}
+.review-bot ul{
+    display: grid;
+    row-gap: 10px;
+    margin: 20px 0 30px;
+    padding-inline-start: 20px;
+    color: var(--secondary-color);
+}
+/* retro  */
+.retro-wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    gap: 25px;
+}
+.retro-left{
+    padding: 25px 15px 15px;
+    background-color:#fafafa;
+    border-radius: 30px;
+    flex:  0 1 689px;
+}
+.retro-right{
+    flex: 0 1 366px;
+    border: 1px solid rgba(55, 55, 55, 0.4);
+    border-radius: 30px;
+}
+.mission-title{
+    padding: 30px;
+}
+.mission-title p:nth-child(2)
+{
+    font-weight: 500;
+}
+.memo-container
+{
+    padding: 15px 15px 0;
+    position: relative;
+}
+.memo-container >div{
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.retro-left .three-tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 110px;
+}
+.retro-box{
+    display: flex;
+    margin-top: 20px;
+}
+.good-container,.be-better-container,.let-do-container
+{
+    min-height: 446px;
+    flex: 0 1 220px;
+    opacity: 0.2;
+}
+.three-tag p{
+    padding: 10px 20px;
+    border-radius: 200px;
+}
+.three-tag p:first-child,.good-container,.good-memo{
+    background: #FADCFF;
+}
+.three-tag p:nth-child(2),.be-better-container,.be-better-memo{
+    background:  #FFEFC7;
+}
+.three-tag p:nth-child(3),.let-do-container,.let-do-memo{
+    background: #C3CBFF;
+}
+.retro  .head-date{
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
 .end{
     display: flex;
     flex-direction: column;
@@ -5,8 +210,25 @@
     align-items: center;
 }
 .end .h2{
-    margin: 20px auto 100px;
+    margin: 20px auto 80px;
 }
 .end .cta-button{
-    margin-top: 110px;
+    margin:80px auto 170px auto;
 }
+.end-icon{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+/* ul.progress-tab
+{
+    display: flex;
+    gap: 5px;
+    max-width: 100%;
+    height: 15px;
+    list-style: none;
+}
+ul.progress-tab li{
+    width: 167px;
+    background: #EEF0FF;
+} */
