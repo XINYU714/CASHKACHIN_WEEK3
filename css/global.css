@@ -18,7 +18,7 @@ html{
     --secondary-color:#373737;
 
 }
-h1,h2,h3,h4,h5,h6,p,span,strong,button{
+h1,h2,h3,h4,h5,h6,p,span,strong,button,ul,li{
     margin: 0;
     padding: 0;
     letter-spacing: 0.02em;
@@ -44,6 +44,7 @@ font-size: 20px;
 line-height: 30px;  
 }
 .h4{
+font-weight: 400;
 font-size: 16px;
 line-height: 24px;
 }
@@ -53,17 +54,22 @@ p{
     line-height: 21px;
 }
 .p-12{
+    font-weight: 400;
     font-size: 12px;
     line-height: 18px;
 }
 .p-10{
-    font-weight: 500;
+font-weight: 500;
 font-size: 10px;
 line-height: 15px;
 }
 /* section  */
 .container {
-    background-color: var(--primary-pink);
+   background-image: url('../src/scrum-bg.webp');
+   background-size:cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-attachment: fixed;
     padding: 60px 0;
     display: flex;
     justify-content: center;
@@ -79,13 +85,15 @@ line-height: 15px;
     padding: 40px 40px 0;
     background-color:var(--primary-white);
     min-height: 960px;
-    height: 100vh;
+    /* height: 100vh; */
     /* position: absolute; */
     position: relative;
     overflow: hidden;
+    margin-top: 50px;
 }
 section >p{
     max-width: 964px;
+    color: var(--secondary-color);
 }
 .cta-button
 {
@@ -97,25 +105,14 @@ section >p{
     border: 1px solid transparent;
     box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
     border-radius: 200px;
-    transition: .5s;
+    transition: .3s;
     cursor: pointer;
-}
-.container > section {
-  max-width: 1200px;
-  width: 1200px;
-  margin: 0px auto;
-  border-radius: 30px;
-  padding: 40px 40px 0;
-  background-color: var(--primary-white);
-  min-height: 960px;
-  /* position: absolute; */
-  margin-top: 50px;
 }
 
 .cta-button:hover{
     background-color: var(--primary-white);
     border: 1px solid var(--secondary-color);
-    transition: .5s;
+    transition: .3s;
 }
 .progress{
     display: flex;
@@ -134,4 +131,21 @@ section >p{
     gap: 5px;
     flex: 0 1 167px;
 
+}
+.progress li.active{
+    background-color: var(--primary-purple);
+
+}
+button.reset{
+    padding: 6px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-white);
+    cursor: pointer;
+    transition: backgrounnd-color 0.3s ease;
+}
+button.reset:hover{
+    background-color: var(--primary-purple);
+    border: 1px solid transparent;
+    transition:backgrounnd-color  0.3s ease;
 }
