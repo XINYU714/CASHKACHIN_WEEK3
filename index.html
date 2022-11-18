@@ -134,30 +134,89 @@
       <section class="planning"></section>
         <!-- section-6  -->
         <section class="daily">
+            <ul class="progress">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
             <h1 class="h1">Daily Scrum</h1>
-            <p class="h4">Now as a team member, you have a total of 40 hours of work need to complete in 5 days of a week, and you also have to complete 8 hours of tasks in one day.</p>
-            <p class="h4">Today is the second day of sprint, you need to report to everyone the status of the project at hand. Please arrange your task properly and drag the tasks from “TO DO” to “TO BE HANDLED” and “IN PROGRESS”</p>
+            <p class="h4">Now as a team member (product designer), during the course of a week, you need to complete a total of 40 hours of work, wherein you must complete<strong> 8 hours </strong>of work each day.
+            </p>
+            <p class="h4">Today is the second day of sprint, you need to report to everyone the status of the project at hand. Please arrange your task accordingly and <strong>drag the tasks from “TO DO” to “TO BE HANDLED” or “IN PROGRESS”</strong>.
+            </p>
             <div class="head-date">
                 <p class="h4">Sprint (14/10/2022-28/10/2022)</p>
-                <button class="p-12">Reset</button>
+                <button class="p-12 reset" id="daily-reset"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 0.265625C6.9082 0.265625 8.87695 2.23438 8.85938 4.64258C8.85938 7.0332 6.9082 8.98438 4.5 8.98438C3.39258 8.98438 2.35547 8.5625 1.58203 7.87695C1.49414 7.78906 1.49414 7.64844 1.58203 7.56055L2.28516 6.85742C2.35547 6.78711 2.47852 6.78711 2.56641 6.85742C3.11133 7.33203 3.7793 7.57812 4.5 7.57812C6.15234 7.57812 7.45312 6.25977 7.45312 4.66016C7.4707 2.97266 6.09961 1.67188 4.48242 1.68945C3.74414 1.68945 3.04102 1.9707 2.49609 2.48047L3.23438 3.21875C3.49805 3.48242 3.30469 3.92188 2.93555 3.92188H0.5625C0.333984 3.92188 0.140625 3.74609 0.140625 3.5V1.14453C0.140625 0.775391 0.597656 0.582031 0.861328 0.845703L1.49414 1.47852C2.28516 0.740234 3.33984 0.283203 4.5 0.265625Z" fill="#373737"/>
+                    </svg>
+                    Reset</button>
             </div>
                 <div class="list-title">
                    <h2 class="h4">TO DO [number]</h2>
-                   <h2 class="h4">TO BE HANDLED</h2>
-                   <h2 class="h4">IN PROGRESS</h2>
-                   <h2 class="h4">DONE [number]</h2>
+                   <h2 class="h4">TO BE HANDLED [number]</h2>
+                   <h2 class="h4">IN PROGRESS [number]</h2>
+                   <h2 class="h4">DONE 2</h2>
                 </div>
                 <div class="list-ct">
                     <div class="list-todo">
                         <div class="card">
                             <div class="card-inner">
-                                <p class="card-title h4">Purchase Order </p>
-                                <p class="h4 date">20-Oct-2022</p>
+                                <p class="card-title h4">[UI] Last Section Design</p>
+                                <p class="h4 date">16-Oct-2022</p>
                                 <div class="under">
-                                    <p class="hour h4">4h</p>
+                                    <p class="hour">2h</p>
                                     <div class="under-right">
                                         <p >Feature-2320</p>
-                                        <img src="" alt="" srcset="" width="30" height="30">
+                                        <img src="src/person.png" alt="person" srcset="" width="30" height="30">
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="card-inner pink">
+                                <p class="card-title h4">[UI] Entry Page Design</p>
+                                <p class="h4 date">18-Oct-2022</p>
+                                <div class="under">
+                                    <p class="hour">4h</p>
+                                    <div class="under-right">
+                                        <p>Feature-2320</p>
+                                        <img src="src/person.png" alt="person" srcset="" width="30" height="30">
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="card-inner pink">
+                                <p class="card-title h4">[UX] User Flow</p>
+                                <p class="h4 date">26-Oct-2022</p>
+                                <div class="under">
+                                    <p class="hour">2h</p>
+                                    <div class="under-right">
+                                        <p>Feature-2320</p>
+                                        <img src="src/person.png" alt="person" srcset="" width="30" height="30">
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="card-inner pink">
+                                <p class="card-title h4">[UI] Guideline</p>
+                                <p class="h4 date">20-Oct-2022</p>
+                                <div class="under">
+                                    <p class="hour">2h</p>
+                                    <div class="under-right">
+                                        <p>Feature-2320</p>
+                                        <img src="src/person.png" alt="person" srcset="" width="30" height="30">
                                     </div>
                                  
                                 </div>
@@ -167,43 +226,97 @@
                     </div>
                     <div class="list-handled"></div>
                     <div class="list-progress"></div>
-                    <div class="list-done"></div>
+                    <div class="list-done">
+                        <div class="card">
+                            <div class="card-inner pink">
+                                <p class="card-title h4">[UI] Wireframe</p>
+                                <p class="h4 date">20-Oct-2022</p>
+                                <div class="under">
+                                    <p class="hour">4h</p>
+                                    <div class="under-right">
+                                        <p class="done">Feature-2320</p>
+                                        <img src="src/person.png" alt="person" srcset="" width="30" height="30">
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <div class="card-inner">
+                                <p class="card-title h4">[UX] Content</p>
+                                <p class="h4 date">20-Oct-2022</p>
+                                <div class="under">
+                                    <p class="hour">4h</p>
+                                    <div class="under-right">
+                                        <p class="done">Feature-2320</p>
+                                        <img src="src/person.png" alt="person" srcset="" width="30" height="30">
+                                    </div>
+                                 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-           <button class="daily-btn cta-button">Ready for Daily Scrum</button>
+           <button class="daily-btn cta-button pos-btn">Ready for Daily Scrum</button>
+
         </section>
         <!-- section-7  -->
         <section class="review">
+            <ul class="progress">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="active"></li>
+                <li></li>
+            </ul>
             <h1 class="h1">Sprint Review</h1>
             <p>The sprint review meeting is performed on the last day of each sprint, which is mainly used to show the outcome and let members review the projects completed in this Sprint, and receive feedback.</p>
             <div class="review-paper">
-                <div class="review-top">
-                    <h2 class="review-title">Sprint Review</h2>
-                    <div class="attend"><p>Attendees:</p>
-                        <span>FF</span>
-                        <span>DH</span>
-                        <span>CC</span>
+                
+                    <div class="review-top">
+                        <h2 class="review-title">Sprint Review</h2>
+                        <div class="attend"><p>Attendees:</p>
+                            <span>FF</span>
+                            <span>DH</span>
+                            <span>CC</span>
+                        </div>
                     </div>
-                    </div>
-                    <div class="review-bot">
-                        <h3 class="h4">Review Goals of the Sprint</h3>
-                        <p>What did we set to accomplish? What did we accomplish? What is still unfinished?</p>
-                        <ul>
-                            <li>Sprint goal 1</li>
-                            <li>Sprint goal 1</li>
-                            <li>Sprint goal 1</li>
-                        </ul>
-                        <h3 class="h4">Release Demo</h3>
-                        <p>What was built? How does it work?</p>
-                        <img src="" alt="" srcset="" width="383" height="157">
-                        <h3 class="h4">Feedback & Notes</h3>
-                        <p>What feedback or questions does the rest of team have?Are any adjustments needed?</p>
-                        <ul>
-                            <li>Sprint goal 1</li>
-                            <li>Sprint goal 1</li>
-                            <li>Sprint goal 1</li>
-                        </ul>
-                    </div>
-
+                <div class="review-flex">
+                <div class="review-wrap">
+                        <div class="review-bot">
+                            <h3 class="h4">Review Goals of the Sprint</h3>
+                            <ul>
+                                <li>Sprint goal 1</li>
+                                <li>Sprint goal 2</li>
+                                <li>Sprint goal 3</li>
+                            </ul>
+                            <h3 class="h4">Feedback & Notes</h3>
+                            <ul>
+                                <li>Feedback 1</li>
+                                <li>Feedback 2</li>
+                                <li>Feedback 3</li>
+                            </ul>
+                            <h3 class="h4">Action Item</h3>
+                            <ul>
+                                <li>Action Item 1</li>
+                                <li>Action Item 2</li>
+                                <li>Action Item 3</li>
+                            </ul>
+                        </div>
+                </div>
+                <div class="review-img">
+                    <p class="h4">Release Demo - 互動式網站</p>
+                    <img src="" alt="Release Demo 互動式網站" width="419" height="180">
+                    <p class="h4">Release Demo - 點點簽</p>
+                    <img src="" alt="Release Demo 點點簽" width="419" height="180">
+                    <p class="h4">Release Demo - Scrum Training</p>
+                    <img src="" alt="Release Demo Scrum Training" width="419" height="180">
+                </div>
+                </div>
                 </div>
         </section>
         <!-- section-8  -->
@@ -215,13 +328,16 @@
                 <li></li>
                 <li></li>
                 <li></li>
-                <li></li>
+                <li  class="active"></li>
             </ul>
             <h1 class="h1">Sprint Retro</h1>
-            <p>In this phase, mainly used to discuss and adjust the development process for the next sprint. Team members will discuss: what went well, what to improve and the next steps. Please complete the task according to the mission requirements.</p>
+            <p>In this phase, team members will discuss what went well, what needs improvement, and what next steps should be taken for the following sprint.</p>
             <div class="head-date">
                 <p class="h4">Sprint (14/10/2022-28/10/2022)</p>
-                <button class="p-12 reset" id="retro-reset">Reset</button>
+                <button class="p-12 reset" id="retro-reset"><svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.5 0.265625C6.9082 0.265625 8.87695 2.23438 8.85938 4.64258C8.85938 7.0332 6.9082 8.98438 4.5 8.98438C3.39258 8.98438 2.35547 8.5625 1.58203 7.87695C1.49414 7.78906 1.49414 7.64844 1.58203 7.56055L2.28516 6.85742C2.35547 6.78711 2.47852 6.78711 2.56641 6.85742C3.11133 7.33203 3.7793 7.57812 4.5 7.57812C6.15234 7.57812 7.45312 6.25977 7.45312 4.66016C7.4707 2.97266 6.09961 1.67188 4.48242 1.68945C3.74414 1.68945 3.04102 1.9707 2.49609 2.48047L3.23438 3.21875C3.49805 3.48242 3.30469 3.92188 2.93555 3.92188H0.5625C0.333984 3.92188 0.140625 3.74609 0.140625 3.5V1.14453C0.140625 0.775391 0.597656 0.582031 0.861328 0.845703L1.49414 1.47852C2.28516 0.740234 3.33984 0.283203 4.5 0.265625Z" fill="#373737"/>
+                    </svg>
+                    Reset</button>
             </div>
             <div class="retro-wrapper">
                 <div class="retro-left">    
@@ -240,30 +356,40 @@
                 <div class="retro-right">
                     <div class="mission-title">
                         <p class="h4">[Mission]</p>
-                        <p>Please put the memo to the right place.</p>
-                        <p class="p-12">use positive words more</p>
+                        <p class="h4">Please put memos containing words of affirmation onto the board.</p>
+            
                     </div>
                     <div class="memo-container">
-                        <div class="good-memo"><p class="p-12">Comment</p></div>
-                        <div class="be-better-memo"><p class="p-12">Bad</p></div>
-                        <div class="let-do-memo"><p class="p-12">Comment</p></div>
+                        <div class="good-memo"><p class="p-10">The project is well scheduled</p></div>
+                        <div class="good-memo"><p class="p-10">Everyone is so lazy</p></div>
+                        <div class="good-memo"><p class="p-10">Do a lot of user interviews</p></div>
+                        <div class="be-better-memo"><p class="p-10">Being too anxious when facing problems</p></div>
+                        <div class="be-better-memo"><p class="p-10">Insufficient time for QA</p></div>
+                        <div class="be-better-memo"><p class="p-10">Our scrum master is not efficient enough</p></div>
+                        <div class="let-do-memo"><p class="p-10">Start filling out the documents properly</p></div>
+                        <div class="let-do-memo"><p class="p-10">I want to lose my job</p></div>
+                        <div class="let-do-memo"><p class="p-10">Make good estimate of the task point</p></div>
                     </div>
+                </div>
+            </div>
+            <button class="retro-btn cta-button pos-btn">Finish Sprint Retro</button>
+        </section>
+        <!-- section-9  -->
+        <section class="end">
+            <div class="end-wrapper">
+                <h1 class="h1">Congrats! (Name).</h1>
+                <h2 class="h2">You successfully completed the training</h2>
+                <p class="h4">Now you already know what is scrum, we are so grateful to have you as part of our team.</p>
+                <button id="again" class="cta-button">Start Again</button>
+                <p class="h4 under-text">Use Atlassian software to let teamwork faster:</p>
+                <div class="end-icon">
+                    <img src="src/confluence-icon.webp" alt="" srcset="" width="206" height="26">
+                    <img src="src/jirasoftware-icon.webp" alt="" srcset="" width="260" height="30">
                 </div>
             </div>
 
         </section>
-        <!-- section-9  -->
-        <section class="end">
-            <h1 class="h1">Congrats! (Name).</h1>
-            <h2 class="h2">You successfully completed the training</h2>
-            <p class="h4">Now you already know what is scrum, we are so grateful to have you as part of our team.</p>
-            <button id="again" class="cta-button">Start Again</button>
-            <p class="h4">Use Atlassian software to let teamwork faster:</p>
-            <div class="end-icon">
-                <img src="" alt="" srcset="" width="206" height="26">
-                <img src="" alt="" srcset="" width="260" height="30">
-            </div>
-        </section>
     </div>
+    <script src="js/drag.js"></script>
   </body>
 </html>
