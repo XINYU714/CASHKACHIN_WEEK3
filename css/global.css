@@ -1,81 +1,104 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html {
-  overflow-x: hidden;
+html{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
-:root {
-  --primary-purple: #c3cbff;
-  --primary-light-green: #cef4ea;
-  --primary-pink: #fadcff;
-  --primary-yellow: #507fe6;
-  --primary-green: #333333;
-  --primary-white: #ffffff;
-  --secondary-color: #373737;
+:root{
+    --primary-purple:#c3cbff;
+    --primary-light-green:#cef4ea;
+    --primary-pink:#fadcff;
+    --primary-yellow:#507fe6;
+    --primary-green:#333333;
+    --primary-white:#ffffff;
+    --secondary-color:#373737;
+
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-strong,
-button {
-  margin: 0;
-  padding: 0;
-  letter-spacing: 0.02em;
-  color: var(--secondary-color);
+h1,h2,h3,h4,h5,h6,p,span,strong,button{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
 }
-.arrow-btn {
+.arrow-btn{
+
 }
-.h1 {
-  font-weight: 800;
-  font-size: 60px;
-  line-height: 90px;
+.h1{
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 90px;
 }
-.h2 {
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 54px;
+.h2{
+    font-weight: 800;
+font-size: 36px;
+line-height: 54px;
 }
-.h3 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 30px;
+.h3{
+    font-weight: 700;
+font-size: 20px;
+line-height: 30px;  
 }
-.h4 {
-  font-size: 16px;
-  line-height: 24px;
+.h4{
+font-size: 16px;
+line-height: 24px;
 }
-p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
 }
-.p-12 {
-  font-size: 12px;
-  line-height: 18px;
+.p-12{
+    font-size: 12px;
+    line-height: 18px;
 }
-.p-10 {
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 15px;
+.p-10{
+    font-weight: 500;
+font-size: 10px;
+line-height: 15px;
 }
 /* section  */
 .container {
-  background-color: var(--primary-pink);
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 1080px;
-
-  /* For Good */
-  flex-direction: column;
+    background-color: var(--primary-pink);
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1080px;
+    flex-direction: column;
+}
+.container > section{
+    max-width: 1200px;
+    width: 1200px;
+    margin: 0px auto;
+    border-radius: 30px;
+    padding: 40px 40px 0;
+    background-color:var(--primary-white);
+    min-height: 960px;
+    height: 100vh;
+    /* position: absolute; */
+    position: relative;
+    overflow: hidden;
+}
+section >p{
+    max-width: 964px;
+}
+.cta-button
+{
+    padding: 20px 40px;
+    background-color: var(--primary-purple);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
+    border-radius: 200px;
+    transition: .5s;
+    cursor: pointer;
 }
 .container > section {
   max-width: 1200px;
@@ -89,33 +112,26 @@ p {
   margin-top: 50px;
 }
 
-.cta-button {
-  padding: 20px 40px;
-  background-color: var(--primary-purple);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24px;
-  border: 1px solid transparent;
-  box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
-  border-radius: 200px;
-  transition: 0.5s;
-  cursor: pointer;
+.cta-button:hover{
+    background-color: var(--primary-white);
+    border: 1px solid var(--secondary-color);
+    transition: .5s;
 }
-.cta-button:hover {
-  background-color: var(--primary-white);
-  border: 1px solid var(--secondary-color);
-  transition: 0.5s;
+.progress{
+    display: flex;
+    gap: 5px;
+    width: 1200px;
+    max-width: 100%;
+    height: 15px;
+    list-style: none;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
-.progress {
-  display: flex;
-  max-width: 1200px;
-  position: absolute;
-}
-.progress li {
-  background-color: #eef0ef;
-  gap: 5px;
-  flex: 0 1 167px;
-}
-.progress li.active {
-  background-color: var(--primary-purple);
+.progress li{
+    width: 167px;
+    background-color: #EEF0FF;
+    gap: 5px;
+    flex: 0 1 167px;
+
 }
