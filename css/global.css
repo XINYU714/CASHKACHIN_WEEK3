@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -98,8 +99,19 @@ section >p{
     border-radius: 200px;
     transition: .5s;
     cursor: pointer;
-
 }
+.container > section {
+  max-width: 1200px;
+  width: 1200px;
+  margin: 0px auto;
+  border-radius: 30px;
+  padding: 40px 40px 0;
+  background-color: var(--primary-white);
+  min-height: 960px;
+  /* position: absolute; */
+  margin-top: 50px;
+}
+
 .cta-button:hover{
     background-color: var(--primary-white);
     border: 1px solid var(--secondary-color);
@@ -122,10 +134,4 @@ section >p{
     gap: 5px;
     flex: 0 1 167px;
 
-}
-.progress li:first-child{
-    
-}
-.progress li.active{
-    background-color: var(--primary-purple);
 }

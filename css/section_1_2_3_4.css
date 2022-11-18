@@ -1,0 +1,112 @@
+.opening {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opening h1 {
+  width: fit-content;
+}
+
+.opening div {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 60px;
+  width: 790px;
+}
+
+.opening div h4 {
+  margin-left: 45px;
+}
+
+.opening input[type="text"] {
+  padding: 24px 135px;
+  border: 1px solid #373737;
+  border-radius: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+.opening input[type="submit"] {
+  margin-top: 20px;
+  padding: 20px 40px;
+  background: #feec71;
+  border: none;
+  box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
+  border-radius: 200px;
+  background: #feec71;
+  box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
+  border-radius: 200px;
+  color: #373737;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+}
+
+.team > div {
+  width: 800px;
+  margin: 60px auto 0 auto;
+}
+.team > div > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 45px;
+}
+.team > div > div > div {
+  margin-left: 90px;
+}
+.team > div > div > div .h3 {
+  margin-bottom: 10px;
+}
+.po {
+  display: flex;
+  flex-direction: column;
+}
+
+.po > div {
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: rgba(55, 55, 55, 0.2);
+  border-radius: 30px 30px 0px 0px;
+  justify-self: flex-end;
+  width: 1000px;
+  align-self: center;
+  padding: 40px 40px 0 40px;
+}
+
+.po > div > img {
+  margin-bottom: 40px;
+}
+
+.po > div > .grid-top {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  justify-items: center;
+  row-gap: 15px;
+  column-gap: 20px;
+}
+.po > div > .grid-top > div {
+  display: flex;
+  flex-direction: row;
+}
+.po > div > .grid-top > div p {
+  padding: 10px;
+}
+
+.po > div > .grid-top > div p:first-child {
+  background: rgba(55, 55, 55, 0.2);
+  border: 1px solid rgba(55, 55, 55, 0.2);
+  width: 170px;
+}
+
+.po > div > .grid-top > div p:last-child {
+  border: 1px solid rgba(55, 55, 55, 0.2);
+  width: 280px;
+  margin-left: -1px;
+}
+
+.po > div > .grid-bottom {
+  display: grid;
+  grid-template-columns: 45px 305px 390px 180px;
+  justify-items: center;
+}
