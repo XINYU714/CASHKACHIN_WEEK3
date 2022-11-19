@@ -7,6 +7,7 @@
 html{
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
+    -webkit-text-size-adjust:none;
 }
 :root{
     --primary-purple:#c3cbff;
@@ -25,9 +26,60 @@ h1,h2,h3,h4,h5,h6,p,span,strong,button,ul,li{
     color: var(--secondary-color);
     font-family: 'Poppins', sans-serif;
 }
-.arrow-btn{
-
+button{
+    background: unset;
+    border: unset;
+    cursor: pointer;
+    transition: 0.5s;
 }
+.arrow-wrap{
+    position: absolute;
+    right: 40px;
+    top: 60px;
+    display: flex;
+    gap: 15px;
+}
+.arrow-btn.disable{
+    position: relative;
+}
+.arrow-btn.disable svg{
+    opacity: 0.4;
+}
+.arrow-btn:hover svg rect:first-child{
+    fill: var(--primary-purple);
+    transition: 0.5s;
+}
+.arrow-btn.disable:hover svg rect:first-child{
+    fill: unset;
+}
+.arrow-btn.disable .dis-btn-tooltip{
+    opacity: 0;
+    position: absolute;
+    padding: 10px 20px;
+    color: var(--secondary-color);
+    background: #FFFFFF;
+    border: 1px solid #373737;
+    max-width: 300px;
+    width: 300px;
+    box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
+    border-radius: 20px;
+    top:60px;
+    right: 0;
+    transition: 0.5s;
+}
+.arrow-btn.disable:hover .dis-btn-tooltip{
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.arrow-btn:hover svg rect:last-child{
+    stroke:transparent;
+    transition: 0.5s;
+}
+.arrow-btn.disable:hover svg rect:last-child{
+    stroke:var(--secondary-color);
+}
+
 .h1{
     font-weight: 800;
     font-size: 60px;
@@ -94,6 +146,9 @@ line-height: 15px;
 section >p{
     max-width: 964px;
     color: var(--secondary-color);
+}
+.cta-button.disable{
+    opacity: 0.4;
 }
 .cta-button
 {

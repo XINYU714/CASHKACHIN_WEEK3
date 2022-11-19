@@ -11,6 +11,7 @@ margin-top: 10px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 30px;
 }
 .head-date >p,.end .h4{
     font-weight: 600;
@@ -19,6 +20,7 @@ margin-top: 10px;
 .daily .list-title,.daily .list-ct{
     display: flex;
     gap: 13px;
+    margin-bottom: 30px;
 }
 .daily >p.h4>strong
 {
@@ -30,6 +32,7 @@ margin-top: 10px;
     background-position: right 20px bottom 10px;
     background-repeat: no-repeat;
     background-size: 230px;
+ 
 }
 .daily .list-title h2{
     padding: 15px;
@@ -120,10 +123,13 @@ margin-top: 10px;
     padding: 0 40px;
 }
 .review-flex .review-wrap{
-    flex: 0 1 217px;
+    flex: 0 1 340px;
 }
 .review-flex .review-img{
     flex: 0 1 419px;
+}
+.review-img img{
+    margin: 10px 0 20px;
 }
 .review-paper .review-top{
     border-bottom: 1px solid rgba(55, 55, 55, 0.2);
