@@ -6,6 +6,20 @@ function fillUserName() {
   ).innerText = user_name;
 }
 
+// hover
+const hoverForMore = document.querySelectorAll(".hover-for-info");
+const moreInfo = document.querySelectorAll(".more-info");
+
+console.log(hoverForMore, moreInfo);
+for (let i = 0; i < hoverForMore.length; i++) {
+  hoverForMore[i].addEventListener("mouseover", function () {
+    moreInfo[i].style.display = "block";
+  });
+  hoverForMore[i].addEventListener("mouseout", function () {
+    moreInfo[i].style.display = "none";
+  });
+}
+
 // dailysection
 let startValue = 0;
 const listCard0 = {
