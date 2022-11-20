@@ -32,7 +32,7 @@
   border-color: var(--primary-purple);
 }
 
-.opening input[type="submit"] {
+.opening button {
   margin-top: 20px;
   padding: 20px 40px;
   background: #feec71;
@@ -52,15 +52,15 @@
   width: 800px;
   margin: 60px auto 0 auto;
 }
-.team > div.team-div > div {
+.team > div.team-div > div.funtions {
   display: flex;
   flex-direction: row;
   margin-bottom: 45px;
 }
-.team > div.team-div > div > div {
+.team > div.team-div > div.funtions > div.funtion-inner {
   margin-left: 90px;
 }
-.team > div.team-div > div > div .h3 {
+.team > div.team-div > div.funtions > div.funtion-inner .h3 {
   margin-bottom: 10px;
 }
 

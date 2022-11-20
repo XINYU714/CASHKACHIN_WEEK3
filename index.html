@@ -37,8 +37,15 @@
             accurately, and successfully pass this scrum pre-training.
           </h4>
         </div>
-        <input type="text" placeholder="Fill in your name" />
-        <input type="submit" name="" id="" value="Ready for Daily Scrum" />
+        <input
+          type="text"
+          placeholder="Fill in your name"
+          name="user_name"
+          id="user_name"
+        />
+        <button
+          onclick="fillUserName()"
+        >Ready for Daily Scrum</button>
       </section>
       <!-- section-2 -->
       <section class="team">
@@ -125,14 +132,14 @@
           Scrum Guide.
         </p>
         <div class="team-div">
-          <div class="product-owner">
+          <div class="funtions">
             <img
               src="\CASHKACHIN_WEEK3\src\pink-mon.webp"
               alt=""
               width="160"
               height="160"
             />
-            <div>
+            <div class="funtion-inner">
               <p class="h3">Product Owner</p>
               <p>
                 Agile teams are, by design, flexible and responsive, and it is
@@ -143,14 +150,14 @@
               </p>
             </div>
           </div>
-          <div class="scrum-master">
+          <div class="funtions">
             <img
               src="\CASHKACHIN_WEEK3\src\green-mon.webp"
               alt=""
               width="160"
               height="160"
             />
-            <div>
+            <div class="funtion-inner">
               <p class="h3">Scrum Master</p>
               <p>
                 Scrum masters are the facilitators of scrum, the lightweight
@@ -163,14 +170,14 @@
               </p>
             </div>
           </div>
-          <div class="development-team">
+          <div class="funtions">
             <img
               src="\CASHKACHIN_WEEK3\src\yellow-mon.webp"
               alt=""
               width="160"
               height="160"
             />
-            <div>
+            <div class="funtion-inner">
               <p class="h3">Development Team</p>
               <p>
                 The development team are the people that do the work. At first
@@ -425,7 +432,7 @@
             </div>
             <div>
               <p class="title">Product Owner</p>
-              <p>Fill in user’s name</p>
+              <p id="fill-user-name"></p>
             </div>
             <div>
               <p class="title">Jira</p>
@@ -1248,7 +1255,7 @@
       <!-- section-9  -->
       <section class="end">
         <div class="end-wrapper">
-          <h1 class="h1">Congrats! (Name).</h1>
+          <h1 class="h1">Congrats! <span id="fill-user-name-last"><span>.</h1>
           <h2 class="h2">You successfully completed the training</h2>
           <p class="h4">
             Now you already know what is scrum, we are so grateful to have you
