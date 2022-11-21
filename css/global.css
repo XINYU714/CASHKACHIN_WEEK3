@@ -54,12 +54,9 @@ button {
 .arrow-btn.disable svg {
   opacity: 0.4;
 }
-.arrow-btn:hover svg rect:first-child {
+.arrow-btn:not(.disable):hover svg rect:first-child {
   fill: var(--primary-purple);
   transition: 0.5s;
-}
-.arrow-btn.disable:hover svg rect:first-child {
-  fill: unset;
 }
 .arrow-btn.disable .dis-btn-tooltip {
   opacity: 0;
@@ -81,14 +78,10 @@ button {
   transition: 0.5s;
 }
 
-.arrow-btn:hover svg rect:last-child {
+.arrow-btn:not(.disable):hover svg rect:last-child {
   stroke: transparent;
   transition: 0.5s;
 }
-.arrow-btn.disable:hover svg rect:last-child {
-  stroke: var(--secondary-color);
-}
-
 .h1 {
   font-weight: 800;
   font-size: 60px;
@@ -172,7 +165,7 @@ section > p {
   cursor: pointer;
 }
 
-.cta-button:hover {
+.cta-button:not(.disable):hover {
   background-color: var(--primary-white);
   border: 1px solid var(--secondary-color);
   transition: 0.3s;
@@ -205,8 +198,21 @@ button.reset {
   cursor: pointer;
   transition: backgrounnd-color 0.3s ease;
 }
-button.reset:hover {
+button.reset.disable{
+  opacity: 0.4;
+}
+button.reset:not(.disable):hover {
   background-color: var(--primary-purple);
   border: 1px solid transparent;
   transition: backgrounnd-color 0.3s ease;
+}
+[draggable="true"] {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+section .currentPage{
+  display: block;
+
 }
