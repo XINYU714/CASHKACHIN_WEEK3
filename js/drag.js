@@ -19,3 +19,36 @@ for (let i = 0; i < hoverForMore.length; i++) {
     moreInfo[i].style.display = "none";
   });
 }
+
+// Scrum Master
+const scrumMasterTask = document.querySelectorAll(
+  ".task-container .tasks[draggable=true]"
+);
+const scrumMasterContainer = document.querySelectorAll(".task-container");
+let dragged = null;
+
+scrumMasterTask.forEach((drag) => {
+  drag.addEventListener("dragstart", (event) => {
+    dragged = event.target;
+    dragged.style.opacity = "0.5";
+  });
+  drag.addEventListener("dragend", (event) => {
+    dragged.style.opacity = "1";
+    // sprintPlanningComplete();
+    countIssue();
+  });
+  scrumMasterContainer.forEach((container) => {
+    container.addEventListener("dragover", (event) => {
+      event.preventDefault();
+      container.appendChild(dragged);
+    });
+  });
+});
+
+function countIssue() {
+  document.getElementById(
+    "realtime-issue"
+  ).innerText = `issue ${scrumMasterContainer[1].childElementCount}`;
+}
+
+countIssue();
