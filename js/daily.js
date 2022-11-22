@@ -1,13 +1,12 @@
 // dailysection 
 const dailyDraggable=document.querySelectorAll('.list-ct .card[draggable="true"]');
 const dailyDragContainer=document.querySelectorAll('.list-ct .drag-container');
-const todoContainer=document.querySelector('.list-todo');
 const dailyListText=document.querySelectorAll('.list-title h2');
 //btn
 const resetdailyBtn=document.getElementById('daily-reset');
 const ctadailyBtn=document.getElementById('daily-cta-btn');
 let dailyDragging = null;
-let clickActice=false;
+let clickActive=false;
 //daily drag event
 dailyDraggable.forEach(dragelement=>{
     dragelement.addEventListener('dragstart',(event)=>{
@@ -31,9 +30,9 @@ dailyDraggable.forEach(dragelement=>{
 countCard();
 function countCard()
 {
-    dailyListText[0].innerHTML="TO DO"+" "+ dailyDragContainer[0].childElementCount;
-    dailyListText[1].innerHTML="TO BE HANDLED"+" "+ dailyDragContainer[1].childElementCount;
-    dailyListText[2].innerHTML="IN PROGRESS"+" "+ dailyDragContainer[2].childElementCount;
+    dailyListText[0].innerHTML="TO DO "+ dailyDragContainer[0].childElementCount;
+    dailyListText[1].innerHTML="TO BE HANDLED "+dailyDragContainer[1].childElementCount;
+    dailyListText[2].innerHTML="IN PROGRESS "+ dailyDragContainer[2].childElementCount;
     // for(let i=0;i<dailyListText.length -1;i++)
     // {
     //    dailyListText[i].innerHTML.replace('0',' ');
@@ -43,7 +42,7 @@ function countCard()
 resetdailyBtn.addEventListener('click',resetDailyList);
 function resetDailyList()
 {
-    if(clickActice==true){
+    if(clickActive==true){
     dailyDraggable.forEach(element => {
     dailyDragContainer[0].appendChild(element);
     });
@@ -59,13 +58,13 @@ function activeBtn()
     {
         resetdailyBtn.classList.remove('disable');
         ctadailyBtn.classList.remove('disable');
-        clickActice=true;
+        clickActive=true;
 
     }
     else{
         resetdailyBtn.classList.add('disable');
         ctadailyBtn.classList.add('disable');
-        clickActice=false;
+        clickActicv=false;
 
     }
    
