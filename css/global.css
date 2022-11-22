@@ -206,13 +206,16 @@ button.reset:not(.disable):hover {
   border: 1px solid transparent;
   transition: backgrounnd-color 0.3s ease;
 }
-[draggable="true"] {
+.card[draggable="true"],[draggable="true"] {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-section .currentPage{
+/* .container > section{
+  display: none;
+} */
+/* .container > section.currentPage{
   display: block;
+} */
 
-}
