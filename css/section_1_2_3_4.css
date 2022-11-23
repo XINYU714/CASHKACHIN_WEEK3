@@ -1,26 +1,53 @@
-.opening {
+.error-section {
+  background-color: rgba(55, 55, 55, 0.6) !important;
+  z-index: 100;
+  position: fixed !important;
+  top: 40px;
+  display: none;
+}
+.error-section .error-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.error-section .error-flex .error-message {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 40px;
+  width: 600px;
+}
+.error-section .error-message p {
+  margin-bottom: 30px;
+}
+
+.opening-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
-.opening h1 {
+.opening-flex h1 {
   width: fit-content;
 }
 
-.opening div {
+.opening-flex div {
   display: flex;
   flex-direction: row;
   margin: 20px 0 60px;
   width: 790px;
 }
 
-.opening div h4 {
+.opening-flex div h4 {
   margin-left: 45px;
 }
 
-.opening input[type="text"] {
+.opening-flex input[type="text"] {
   padding: 24px 135px;
   border: 1px solid #373737;
   border-radius: 30px;
@@ -28,11 +55,11 @@
   text-align: center;
 }
 
-.opening input[type="text"]:focus {
+.opening-flex input[type="text"]:focus {
   border-color: var(--primary-purple);
 }
 
-.opening button {
+.opening-flex button {
   margin-top: 20px;
   padding: 20px 40px;
   background: #feec71;
@@ -172,12 +199,12 @@
   left: 805px;
 }
 
-.po {
+.po-flex {
   display: flex;
   flex-direction: column;
 }
 
-.po > div.po-div {
+.po-flex > div.po-div {
   border-width: 1px 1px 0px 1px;
   border-style: solid;
   border-color: rgba(55, 55, 55, 0.2);
@@ -189,38 +216,38 @@
   margin-top: auto;
 }
 
-.po > div.po-div > img {
+.po-flex > div.po-div > img {
   margin-bottom: 40px;
 }
 
-.po > div.po-div > .grid-top {
+.po-flex > div.po-div > .grid-top {
   display: grid;
   grid-template-columns: repeat(2, 450px);
   justify-items: center;
   row-gap: 15px;
   column-gap: 20px;
 }
-.po > div.po-div > .grid-top > div {
+.po-flex > div.po-div > .grid-top > div {
   display: flex;
   flex-direction: row;
 }
-.po > div.po-div > .grid-top > div p {
+.po-flex > div.po-div > .grid-top > div p {
   padding: 10px;
 }
 
-.po > div.po-div > .grid-top > div p:first-child {
+.po-flex > div.po-div > .grid-top > div p:first-child {
   background: rgba(55, 55, 55, 0.2);
   border: 1px solid rgba(55, 55, 55, 0.2);
   width: 170px;
 }
 
-.po > div.po-div > .grid-top > div p:last-child {
+.po-flex > div.po-div > .grid-top > div p:last-child {
   border: 1px solid rgba(55, 55, 55, 0.2);
   width: 280px;
   margin-left: -1px;
 }
 
-.po > div.po-div > .grid-bottom {
+.po-flex > div.po-div > .grid-bottom {
   display: grid;
   grid-template-columns: 45px 305px 390px 180px;
   grid-template-rows: 45px 130px 130px 130px;
@@ -258,7 +285,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-.po button.cta-button,
+.po-flex button.cta-button,
 .planning button.cta-button {
   position: absolute;
   bottom: 40px;

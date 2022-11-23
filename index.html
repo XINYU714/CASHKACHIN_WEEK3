@@ -17,8 +17,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="outer-wrap">
+    <div class="outer-wrap">
       <div class="inner-wrap">
+      <section class="error-section">
+        <div class="error-flex">
+          <div class="error-message">
+            <p class="h3" id="error-message">123</p>
+            <button class="cta-button">Try Again</button>
+          </div>
+        </div>
+      </section>
+
    <!-- section-1-->
    <section class="opening currentPage">
     <h1 class="h1">
@@ -31,24 +40,24 @@
         alt=""
         width="140"
         height="140"
-      />
-      <h4 class="h4">
-        Before officially entering the team, we will take you through the
-        process and operation of Scrum.<br /><br />
-        Please read the content of each task carefully, complete the task
-        accurately, and successfully pass this scrum pre-training.
-      </h4>
+        />
+        <h4 class="h4">
+          Before officially entering the team, we will take you through the
+          process and operation of Scrum.<br /><br />
+          Please read the content of each task carefully, complete the task
+          accurately, and successfully pass this scrum pre-training.
+        </h4>
+      </div>
+      <input
+        type="text"
+        placeholder="Fill in your name"
+        name="user_name"
+        id="user_name"/>
+      <button
+        onclick="fillUserName()"
+      >Ready for Daily Scrum</button>
     </div>
-    <input
-      type="text"
-      placeholder="Fill in your name"
-      name="user_name"
-      id="user_name"
-    />
-    <button
-      onclick="fillUserName()"
-    >Ready for Daily Scrum</button>
-    </section>
+  </section>
   <!-- section-2 -->
   <section class="team">
     <ul class="progress">
@@ -351,159 +360,161 @@
           <li></li>
           <li></li>
         </ul>
-        <div class="arrow-wrap">
-          <button class="pre arrow-btn">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="49.5"
-                y="49.5"
-                width="49"
-                height="49"
-                rx="24.5"
-                transform="rotate(-180 49.5 49.5)"
-                fill="white"
-              />
-              <path
-                d="M26.0625 30.9062C26.375 30.5937 26.3438 30.125 26.0625 29.8125L22.2813 26.25L31.25 26.25C31.6875 26.25 32 25.9062 32 25.5L32 24.5C32 24.0625 31.6875 23.75 31.25 23.75L22.2813 23.75L26.0625 20.1562C26.3438 19.8437 26.3438 19.375 26.0625 19.0625L25.375 18.375C25.0625 18.0937 24.5938 18.0937 24.3125 18.375L18.2188 24.4687C17.9375 24.75 17.9375 25.2187 18.2188 25.5312L24.3125 31.5937C24.5938 31.875 25.0625 31.875 25.375 31.5937L26.0625 30.9062Z"
-                fill="#373737"
-              />
-              <rect
-                x="49.5"
-                y="49.5"
-                width="49"
-                height="49"
-                rx="24.5"
-                transform="rotate(-180 49.5 49.5)"
-                stroke="#373737"
-              />
-            </svg>
-          </button>
-          <button class="next arrow-btn disable">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="0.5"
-                y="0.5"
-                width="49"
-                height="49"
-                rx="24.5"
-                fill="white"
-              />
-              <path
-                d="M23.9375 19.0938C23.625 19.4062 23.6562 19.875 23.9375 20.1875L27.7188 23.75H18.75C18.3125 23.75 18 24.0938 18 24.5V25.5C18 25.9375 18.3125 26.25 18.75 26.25H27.7188L23.9375 29.8438C23.6562 30.1562 23.6562 30.625 23.9375 30.9375L24.625 31.625C24.9375 31.9062 25.4062 31.9062 25.6875 31.625L31.7812 25.5312C32.0625 25.25 32.0625 24.7812 31.7812 24.4688L25.6875 18.4062C25.4062 18.125 24.9375 18.125 24.625 18.4062L23.9375 19.0938Z"
-                fill="#373737"
-              />
-              <rect
-                x="0.5"
-                y="0.5"
-                width="49"
-                height="49"
-                rx="24.5"
-                stroke="#373737"
-              />
-            </svg>
-            <div class="dis-btn-tooltip">
-              Please finish the mission and click 'User Story is Ready!' to
-              continue.
+        <div class="po-flex">
+          <div class="arrow-wrap">
+            <button class="pre arrow-btn">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="49.5"
+                  y="49.5"
+                  width="49"
+                  height="49"
+                  rx="24.5"
+                  transform="rotate(-180 49.5 49.5)"
+                  fill="white"
+                />
+                <path
+                  d="M26.0625 30.9062C26.375 30.5937 26.3438 30.125 26.0625 29.8125L22.2813 26.25L31.25 26.25C31.6875 26.25 32 25.9062 32 25.5L32 24.5C32 24.0625 31.6875 23.75 31.25 23.75L22.2813 23.75L26.0625 20.1562C26.3438 19.8437 26.3438 19.375 26.0625 19.0625L25.375 18.375C25.0625 18.0937 24.5938 18.0937 24.3125 18.375L18.2188 24.4687C17.9375 24.75 17.9375 25.2187 18.2188 25.5312L24.3125 31.5937C24.5938 31.875 25.0625 31.875 25.375 31.5937L26.0625 30.9062Z"
+                  fill="#373737"
+                />
+                <rect
+                  x="49.5"
+                  y="49.5"
+                  width="49"
+                  height="49"
+                  rx="24.5"
+                  transform="rotate(-180 49.5 49.5)"
+                  stroke="#373737"
+                />
+              </svg>
+            </button>
+            <button class="next arrow-btn disable">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="49"
+                  height="49"
+                  rx="24.5"
+                  fill="white"
+                />
+                <path
+                  d="M23.9375 19.0938C23.625 19.4062 23.6562 19.875 23.9375 20.1875L27.7188 23.75H18.75C18.3125 23.75 18 24.0938 18 24.5V25.5C18 25.9375 18.3125 26.25 18.75 26.25H27.7188L23.9375 29.8438C23.6562 30.1562 23.6562 30.625 23.9375 30.9375L24.625 31.625C24.9375 31.9062 25.4062 31.9062 25.6875 31.625L31.7812 25.5312C32.0625 25.25 32.0625 24.7812 31.7812 24.4688L25.6875 18.4062C25.4062 18.125 24.9375 18.125 24.625 18.4062L23.9375 19.0938Z"
+                  fill="#373737"
+                />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="49"
+                  height="49"
+                  rx="24.5"
+                  stroke="#373737"
+                />
+              </svg>
+              <div class="dis-btn-tooltip">
+                Please finish the mission and click 'User Story is Ready!' to
+                continue.
+              </div>
+            </button>
+          </div>
+          <h1 class="h1">As a Product Owner</h1>
+          <p class="h4">
+            You need to have the ability to clearly identify the product needs.
+            Please fill in the user story according to the clues below:
+          </p>
+          <div class="po-div">
+            <img
+              src="\CASHKACHIN_WEEK3\src\confluence-icon.webp"
+              alt=""
+              width="206"
+              height="26"
+            />
+            <div class="grid-top">
+              <div>
+                <p class="title">Document Status</p>
+                <p>In progress</p>
+              </div>
+              <div>
+                <p class="title">Team</p>
+                <p>CASHKACHIN</p>
+              </div>
+              <div>
+                <p class="title">Product Owner</p>
+                <p id="fill-user-name"></p>
+              </div>
+              <div>
+                <p class="title">Jira</p>
+                <p>F2E WEEK 3</p>
+              </div>
             </div>
-          </button>
-        </div>
-        <h1 class="h1">As a Product Owner</h1>
-        <p class="h4">
-          You need to have the ability to clearly identify the product needs.
-          Please fill in the user story according to the clues below:
-        </p>
-        <div class="po-div">
-          <img
-            src="\CASHKACHIN_WEEK3\src\confluence-icon.webp"
-            alt=""
-            width="206"
-            height="26"
-          />
-          <div class="grid-top">
-            <div>
-              <p class="title">Document Status</p>
-              <p>In progress</p>
-            </div>
-            <div>
-              <p class="title">Team</p>
-              <p>CASHKACHIN</p>
-            </div>
-            <div>
-              <p class="title">Product Owner</p>
-              <p id="fill-user-name"></p>
-            </div>
-            <div>
-              <p class="title">Jira</p>
-              <p>F2E WEEK 3</p>
+            <div class="grid-bottom">
+              <div class="gray-table"></div>
+              <p class="gray-table">User Story/Jira Issue</p>
+              <p class="gray-table">Acceptance Criteria</p>
+              <p class="gray-table">Notes</p>
+              <p class="gray-table center-table">1</p>
+              <p>
+                I learned about the different roles and responsibilities involved
+                in Scrum.
+              </p>
+              <div>
+                <ul>
+                  <li>
+                    Need to explain the job description of Product Owner, Scrum
+                    Master and Development Team.
+                  </li>
+                </ul>
+              </div>
+              <div></div>
+              <p class="gray-table center-table">2</p>
+              <p>I can understand the Sprint process from the webpage</p>
+              <div>
+                <ul>
+                  <li>
+                    Relevant understanding of Product Backlog, Sprint Planning,
+                    and Sprint Backlog
+                  </li>
+                  <li>
+                    Ability to identify the correct job role responsible for each
+                    process.
+                  </li>
+                </ul>
+              </div>
+              <div></div>
+              <p class="gray-table center-table">3</p>
+              <div>
+                <textarea
+                  type="text"
+                  id="po-textarea"
+                  placeholder="Example: I can use jira and confluence to make work flow faster."
+                  oninput="poTextarea()"
+                  value="value"
+                ></textarea>
+              </div>
+              <div>
+                <ul>
+                  <li>Basic understanding on how to use Jira and Confluence.</li>
+                </ul>
+              </div>
+              <p>Enter your own user story in this row.</p>
             </div>
           </div>
-          <div class="grid-bottom">
-            <div class="gray-table"></div>
-            <p class="gray-table">User Story/Jira Issue</p>
-            <p class="gray-table">Acceptance Criteria</p>
-            <p class="gray-table">Notes</p>
-            <p class="gray-table center-table">1</p>
-            <p>
-              I learned about the different roles and responsibilities involved
-              in Scrum.
-            </p>
-            <div>
-              <ul>
-                <li>
-                  Need to explain the job description of Product Owner, Scrum
-                  Master and Development Team.
-                </li>
-              </ul>
-            </div>
-            <div></div>
-            <p class="gray-table center-table">2</p>
-            <p>I can understand the Sprint process from the webpage</p>
-            <div>
-              <ul>
-                <li>
-                  Relevant understanding of Product Backlog, Sprint Planning,
-                  and Sprint Backlog
-                </li>
-                <li>
-                  Ability to identify the correct job role responsible for each
-                  process.
-                </li>
-              </ul>
-            </div>
-            <div></div>
-            <p class="gray-table center-table">3</p>
-            <div>
-              <textarea
-                type="text"
-                id="po-textarea"
-                placeholder="Example: I can use jira and confluence to make work flow faster."
-                oninput="poTextarea()"
-                value="value"
-              ></textarea>
-            </div>
-            <div>
-              <ul>
-                <li>Basic understanding on how to use Jira and Confluence.</li>
-              </ul>
-            </div>
-            <p>Enter your own user story in this row.</p>
-          </div>
+          <button class="cta-button disable" id="po-submit" onclick="poSubmitFunc()">
+            User Story is Ready!
+          </button>
         </div>
-        <button class="cta-button disable" id="po-submit" onclick="poSubmitFunc()">
-          User Story is Ready!
-        </button>
       </section>
        <!-- section-5  -->
        <section class="planning">
