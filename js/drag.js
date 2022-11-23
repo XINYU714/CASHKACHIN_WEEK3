@@ -1,9 +1,22 @@
 // Fill User Name
+const nameForm = document.querySelector("#name-button");
+const userInput = document.querySelector("#user_name");
+
+function startFillName() {
+  nameForm.classList.remove("name-disable");
+  nameForm.disabled = false;
+}
+function haveName() {
+  if (userInput.value == "") {
+    nameForm.classList.add("name-disable");
+    nameForm.disabled = true;
+  }
+}
 function fillUserName() {
-  var user_name = document.getElementById("user_name").value;
   document.getElementById("fill-user-name").innerText = document.getElementById(
     "fill-user-name-last"
-  ).innerText = user_name;
+  ).innerText = userInput.value;
+  turnNextPage(1);
 }
 
 // hover
@@ -20,19 +33,24 @@ for (let i = 0; i < hoverForMore.length; i++) {
   });
 }
 
-
 // Fill the textarea
-const poSubmit = document.getElementById("po-submit");
-const poTextArea = document.getElementById("po-textarea");
-const dynamicTask = document.getElementById("dynamic-task");
+const poSubmit = document.querySelector("#po-submit");
+const poTextArea = document.querySelector("#po-textarea");
+const dynamicTask = document.querySelector("#dynamic-task");
 function poTextarea() {
   poSubmit.classList.remove("disable");
+  poSubmit.disabled = false;
 }
-
+function havePoText() {
+  if (dynamicTask.value == "") {
+    poSubmit.classList.add("disable");
+    poSubmit.disabled = true;
+  }
+}
 function poSubmitFunc() {
   dynamicTask.innerText = poTextArea.value;
+  turnNextPage(4);
 }
-
 
 // Scrum Master
 const scrumMasterTask = document.querySelectorAll(
@@ -66,7 +84,6 @@ scrumMasterTask.forEach((drag) => {
 function countIssue() {
   document.getElementById(
     "realtime-issue"
-
   ).innerText = `${scrumMasterContainer[1].childElementCount} issue`;
 
   if (scrumMasterContainer[1].childElementCount > 0) {
@@ -110,3 +127,9 @@ function resetScrumPriority() {
   resetBTN.classList.add("disable");
 }
 
+// Error Message
+const errorSection = document.getElementById("error");
+
+function tryAgain() {
+  errorSection.classList.add("display-none");
+}

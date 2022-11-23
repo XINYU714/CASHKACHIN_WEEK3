@@ -19,11 +19,11 @@
     <div class="container">
     <div class="outer-wrap">
       <div class="inner-wrap">
-      <section class="error-section">
+      <section class="error-section display-none" id="error">
         <div class="error-flex">
           <div class="error-message">
             <p class="h3" id="error-message">123</p>
-            <button class="cta-button">Try Again</button>
+            <button class="cta-button" onclick="tryAgain()">Try Again</button>
           </div>
         </div>
       </section>
@@ -49,13 +49,19 @@
           accurately, and successfully pass this scrum pre-training.
         </h4>
       </div>
-      <input
-        type="text"
-        placeholder="Fill in your name"
-        name="user_name"
-        id="user_name"/>
+        <input
+          type="text"
+          placeholder="Fill in your name"
+          oninput="startFillName()"
+          onblur="haveName()"
+          name="user_name"
+          autofocus
+          id="user_name"/>
       <button
         onclick="fillUserName()"
+        id="name-button"
+        class="name-disable"
+        disabled
       >Ready for Daily Scrum</button>
        </div>
   </section>
@@ -501,7 +507,9 @@
                   id="po-textarea"
                   placeholder="Example: I can use jira and confluence to make work flow faster."
                   oninput="poTextarea()"
+                  onblur="havePoText()"
                   value="value"
+                  disabled
                 ></textarea>
               </div>
               <div>
