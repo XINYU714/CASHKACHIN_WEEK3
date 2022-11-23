@@ -159,7 +159,7 @@ p {
   /* position: absolute; */
   position: relative;
   overflow: hidden;
-  /* margin-top: 50px; */
+  transition: 0.8s;
 }
 section > p {
   max-width: 964px;
@@ -228,10 +228,3 @@ button.reset:not(.disable):hover {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-/* .container > section{
-  display: none;
-} 
- .container > section.currentPage{
-  display: flex;
-} */
-

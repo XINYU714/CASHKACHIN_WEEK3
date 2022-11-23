@@ -37,9 +37,6 @@ for(let i=0;i<memo.length;i++)
     memoContainer[i].appendChild(memoDragging[i]);
     memoDragging[i].style.position="static";
    });
-
-
-
 memoDragging = [null,null,null];
 
 }
@@ -104,6 +101,7 @@ function checkRetroAns()
     if(checkPoint1==4 && checkPoint2==9 && checkPoint3==16)
     {
         console.log('excellent');
+        turnNextPage(8);
     }
     else{
         console.log('oh no');
