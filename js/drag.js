@@ -20,6 +20,7 @@ for (let i = 0; i < hoverForMore.length; i++) {
   });
 }
 
+
 // Fill the textarea
 const poSubmit = document.getElementById("po-submit");
 const poTextArea = document.getElementById("po-textarea");
@@ -32,13 +33,16 @@ function poSubmitFunc() {
   dynamicTask.innerText = poTextArea.value;
 }
 
+
 // Scrum Master
 const scrumMasterTask = document.querySelectorAll(
   ".task-container .tasks[draggable=true]"
 );
 const scrumMasterContainer = document.querySelectorAll(".task-container");
+
 const submitBTN = document.getElementById("scrum-submit");
 const resetBTN = document.getElementById("scrum-reset");
+
 let dragged = null;
 
 scrumMasterTask.forEach((drag) => {
@@ -62,6 +66,7 @@ scrumMasterTask.forEach((drag) => {
 function countIssue() {
   document.getElementById(
     "realtime-issue"
+
   ).innerText = `${scrumMasterContainer[1].childElementCount} issue`;
 
   if (scrumMasterContainer[1].childElementCount > 0) {
@@ -104,3 +109,4 @@ function resetScrumPriority() {
   submitBTN.classList.add("disable");
   resetBTN.classList.add("disable");
 }
+
