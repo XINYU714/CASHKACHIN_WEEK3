@@ -72,6 +72,7 @@ button {
   top: 60px;
   right: 0;
   transition: 0.5s;
+  text-align: center;
 }
 .arrow-btn.disable:hover .dis-btn-tooltip {
   opacity: 1;
@@ -130,20 +131,35 @@ p {
   align-items: center;
   min-height: 1080px;
   flex-direction: column;
+  overflow:hidden;
+
 }
-.container > section {
+.container .outer-wrap{
+  position: relative;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.container .inner-wrap{
+  display: flex;
+  scroll-behavior: smooth;
+  width: fit-content;
+}
+.container  section {
   max-width: 1200px;
   width: 1200px;
   margin: 0px auto;
   border-radius: 30px;
   padding: 40px 40px 0;
   background-color: var(--primary-white);
-  min-height: 960px;
+  /* min-height: 960px; */
+  height: 960px;
   /* height: 100vh; */
   /* position: absolute; */
   position: relative;
   overflow: hidden;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 section > p {
   max-width: 964px;
@@ -206,7 +222,7 @@ button.reset:not(.disable):hover {
   border: 1px solid transparent;
   transition: backgrounnd-color 0.3s ease;
 }
-.card[draggable="true"],[draggable="true"] {
+:not([draggable="true"]),[draggable="true"] {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -214,8 +230,8 @@ button.reset:not(.disable):hover {
 }
 /* .container > section{
   display: none;
-} */
-/* .container > section.currentPage{
-  display: block;
+} 
+ .container > section.currentPage{
+  display: flex;
 } */
 
