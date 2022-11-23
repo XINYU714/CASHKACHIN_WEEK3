@@ -20,11 +20,29 @@ for (let i = 0; i < hoverForMore.length; i++) {
   });
 }
 
+
+// Fill the textarea
+const poSubmit = document.getElementById("po-submit");
+const poTextArea = document.getElementById("po-textarea");
+const dynamicTask = document.getElementById("dynamic-task");
+function poTextarea() {
+  poSubmit.classList.remove("disable");
+}
+
+function poSubmitFunc() {
+  dynamicTask.innerText = poTextArea.value;
+}
+
+
 // Scrum Master
 const scrumMasterTask = document.querySelectorAll(
   ".task-container .tasks[draggable=true]"
 );
 const scrumMasterContainer = document.querySelectorAll(".task-container");
+
+const submitBTN = document.getElementById("scrum-submit");
+const resetBTN = document.getElementById("scrum-reset");
+
 let dragged = null;
 
 scrumMasterTask.forEach((drag) => {
@@ -48,7 +66,47 @@ scrumMasterTask.forEach((drag) => {
 function countIssue() {
   document.getElementById(
     "realtime-issue"
-  ).innerText = `issue ${scrumMasterContainer[1].childElementCount}`;
+
+  ).innerText = `${scrumMasterContainer[1].childElementCount} issue`;
+
+  if (scrumMasterContainer[1].childElementCount > 0) {
+    submitBTN.classList.remove("disable");
+    resetBTN.classList.remove("disable");
+  }
 }
 
 countIssue();
+let scrumResult = true;
+function scrumSubmit() {
+  if ((scrumMasterContainer[1].childElementCount = 5)) {
+    let testPriority = [];
+    document.querySelectorAll(".priority-no").forEach((no) => {
+      testPriority.push(Number(no.innerText));
+    });
+
+    testPriority.forEach((test, i, arr) => {
+      if (test < arr[i + 1]) {
+        scrumResult = false;
+      }
+    });
+  } else {
+    scrumResult = false;
+  }
+
+  if (scrumResult == true) {
+    console.log("you success");
+  } else {
+    console.log("you faild");
+    resetScrumPriority();
+    scrumResult = true;
+  }
+}
+
+function resetScrumPriority() {
+  scrumMasterTask.forEach((task) => {
+    scrumMasterContainer[0].appendChild(task);
+  });
+  submitBTN.classList.add("disable");
+  resetBTN.classList.add("disable");
+}
+
