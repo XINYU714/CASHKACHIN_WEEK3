@@ -21,6 +21,7 @@ dailyDraggable.forEach(dragelement=>{
     dailyDragContainer.forEach(container => {
         container.addEventListener('dragover', (event)=>{
             event.preventDefault();
+            event.stopPropagation();
             container.appendChild(dailyDragging);
         
         });
@@ -30,13 +31,9 @@ dailyDraggable.forEach(dragelement=>{
 countCard();
 function countCard()
 {
-    dailyListText[0].innerHTML="TO DO "+ dailyDragContainer[0].childElementCount;
-    dailyListText[1].innerHTML="TO BE HANDLED "+dailyDragContainer[1].childElementCount;
-    dailyListText[2].innerHTML="IN PROGRESS "+ dailyDragContainer[2].childElementCount;
-    // for(let i=0;i<dailyListText.length -1;i++)
-    // {
-    //    dailyListText[i].innerHTML.replace('0',' ');
-    // }
+    dailyListText[0].innerHTML=`TO DO  ${dailyDragContainer[0].childElementCount}`;
+    dailyListText[1].innerHTML=`TO BE HANDLED ${dailyDragContainer[1].childElementCount}`;
+    dailyListText[2].innerHTML=`IN PROGRESS ${dailyDragContainer[2].childElementCount}`;
 };
 // Resetevent 
 resetdailyBtn.addEventListener('click',resetDailyList);
@@ -46,7 +43,6 @@ function resetDailyList()
     dailyDraggable.forEach(element => {
     dailyDragContainer[0].appendChild(element);
     });
-    console.log('reset success');
     activeBtn();
     countCard();
 }
@@ -64,8 +60,7 @@ function activeBtn()
     else{
         resetdailyBtn.classList.add('disable');
         ctadailyBtn.classList.add('disable');
-        clickActicv=false;
-
+        clickActive=false;
     }
    
 }
@@ -85,11 +80,17 @@ function checkDailyAns()
     });
    if(ans==8)
    {
-    console.log('ans is correct');
-    //add arrow btn active
+    clickActive=false;
+    const removeDrag=document.querySelectorAll('.card');
+    for(let i=0;i<removeDrag.length;i++)
+    {
+        removeDrag[i].setAttribute('draggable',false);
+    }
+    resetdailyBtn.classList.add('disable');
+    ctadailyBtn.classList.add('disable');
+    //put next page
    }
    else{
-    console.log('please try again');
     resetDailyList();
    }
 }

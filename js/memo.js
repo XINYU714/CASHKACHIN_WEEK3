@@ -35,14 +35,12 @@ for(let i=0;i<memo.length;i++)
     memoContainer[i].addEventListener('dragover', (event)=>{
     event.preventDefault();
     memoContainer[i].appendChild(memoDragging[i]);
-    memoDragging[i].style.top="unset";
-    memoDragging[i].style.left="unset";
-    
+    memoDragging[i].style.position="static";
    });
-//    missionContainer.addEventListener('dragenter', (event)=>{
-//     event.preventDefault();
-//     missionContainer.appendChild(memoDragging[i]);
-// });
+
+
+
+memoDragging = [null,null,null];
 
 }
 initialPos();
@@ -62,7 +60,8 @@ function resetMemo()
     {
         initialNote.forEach(element =>{
             missionContainer.appendChild(element);
-            initialPos();
+
+            element.style.position="absolute";
            
         });
         memoDragging = [null,null,null];
