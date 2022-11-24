@@ -119,6 +119,11 @@ function scrumSubmit() {
     turnNextPage(5);
     submitBTN.classList.add("display-none");
     document.querySelector("#scrum-next-btn").disabled = false;
+    resetBTN.classList.add("disable");
+    resetBTN.disabled = true;
+    scrumMasterTask.forEach((div) => {
+      div.draggable = false;
+    });
   } else {
     resetScrumPriority();
     wrongAnswer(scrumResult);
