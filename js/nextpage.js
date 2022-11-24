@@ -7,11 +7,10 @@ for(let i=0;i<preBtn.length;i++)
 {
     preBtn[i].onclick=()=>turnPrePage(i+2);
 }
-// nextBtn 0 1
-// nextBtn[i].onclick=()=>turnNextPage(i+2);
-nextBtn[0].onclick=()=>turnNextPage(2);
-nextBtn[1].onclick=()=>turnNextPage(3);
-nextBtn[5].onclick=()=>turnPrePage(7);
+for(let i=0;i<nextBtn.length;i++)
+{
+    nextBtn[i].onclick=()=>turnNextPage(i+2);
+}
 againBtn.onclick=()=>{
     window.location.reload();
 }
@@ -25,5 +24,25 @@ function turnPrePage(x)
 {
     allSection[x+1].style.transform=`translateX(calc(1200px * ${x}))`;
     console.log(allSection[x+1].style.transform);
+}
+
+window.onresize=()=>resizeScreen();
+function resizeScreen(){
+    
+    if (window.screen.width<1200 && tool==0)
+    {
+        const screen = document.createElement('div');
+        const img = document.createElement('img');
+        img.src="../src/computer.svg";
+        let newContent = document.createTextNode('p');
+        newContent.textContent="You have to use a device with over 1200 pixels to have a better experience.";
+        screen.classList.add('screen-max');
+        screen.appendChild(img);
+        screen.appendChild(newContent);
+        document.body.appendChild(screen);
+        console.log('ssfs');
+        return resize==false;
+    }
+
 }
 
