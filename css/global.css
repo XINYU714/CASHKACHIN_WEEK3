@@ -48,17 +48,18 @@ button {
   display: flex;
   gap: 15px;
 }
-.arrow-btn.disable {
+.arrow-btn:disabled {
   position: relative;
 }
-.arrow-btn.disable svg {
+.arrow-btn:disabled svg {
   opacity: 0.4;
 }
-.arrow-btn:not(.disable):hover svg rect:first-child {
+.arrow-btn:not(:disabled):hover svg rect:first-child {
   fill: var(--primary-purple);
   transition: 0.5s;
 }
-.arrow-btn.disable .dis-btn-tooltip {
+.arrow-btn:disabled .dis-btn-tooltip,
+.arrow-btn .dis-btn-tooltip {
   opacity: 0;
   position: absolute;
   padding: 10px 20px;
@@ -72,14 +73,14 @@ button {
   top: 60px;
   right: 0;
   transition: 0.5s;
-  text-align: center;
+  text-align: left;
 }
-.arrow-btn.disable:hover .dis-btn-tooltip {
+.arrow-btn:disabled:hover .dis-btn-tooltip {
   opacity: 1;
   transition: 0.5s;
 }
 
-.arrow-btn:not(.disable):hover svg rect:last-child {
+.arrow-btn:not(:disabled):hover svg rect:last-child {
   stroke: transparent;
   transition: 0.5s;
 }
@@ -143,6 +144,7 @@ p {
 .container .inner-wrap {
   display: flex;
   scroll-behavior: smooth;
+  /* flex-direction: column; */
   width: fit-content;
 }
 .container section {

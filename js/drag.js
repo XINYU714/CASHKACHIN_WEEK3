@@ -113,6 +113,7 @@ function scrumSubmit() {
     });
   } else {
     scrumResult = false;
+    wrongAnswer(0);
   }
 
   if (scrumResult == true) {
@@ -132,8 +133,20 @@ function resetScrumPriority() {
 }
 
 // Error Message
-const errorSection = document.getElementById("error");
+const errorSection = document.querySelector("#error");
+const errorMessage = document.querySelector("#error-message");
+const errorMessageText = [
+  "Please drag all Jira tasks in the container below.",
+  "Wrong order. Check if the prioritization is arrangement in descending order.",
+  "Please check all task cards in ‘To Do’ and ‘In Progress’ take total 8 hours.",
+  "Each topic has two correct answers, please choose the memo which uses positive words.",
+];
 
 function tryAgain() {
   errorSection.classList.add("display-none");
+}
+
+function wrongAnswer(n) {
+  errorSection.classList.remove("display-none");
+  errorMessage.innerText = errorMessageText[n];
 }
