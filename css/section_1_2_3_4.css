@@ -203,9 +203,14 @@
 .po-flex {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
-.po-flex > div.po-div {
+.po-flex p.h4 {
+  width: 965px;
+}
+
+.po-flex .po-div {
   border-width: 1px 1px 0px 1px;
   border-style: solid;
   border-color: rgba(55, 55, 55, 0.2);
@@ -217,38 +222,38 @@
   margin-top: auto;
 }
 
-.po-flex > div.po-div > img {
+.po-flex .po-div > img {
   margin-bottom: 40px;
 }
 
-.po-flex > div.po-div > .grid-top {
+.po-flex .po-div > .grid-top {
   display: grid;
   grid-template-columns: repeat(2, 450px);
   justify-items: center;
   row-gap: 15px;
   column-gap: 20px;
 }
-.po-flex > div.po-div > .grid-top > div {
+.po-flex .po-div > .grid-top > div {
   display: flex;
   flex-direction: row;
 }
-.po-flex > div.po-div > .grid-top > div p {
+.po-flex .po-div > .grid-top > div p {
   padding: 10px;
 }
 
-.po-flex > div.po-div > .grid-top > div p:first-child {
+.po-flex .po-div > .grid-top > div p:first-child {
   background: rgba(55, 55, 55, 0.2);
   border: 1px solid rgba(55, 55, 55, 0.2);
   width: 170px;
 }
 
-.po-flex > div.po-div > .grid-top > div p:last-child {
+.po-flex .po-div > .grid-top > div p:last-child {
   border: 1px solid rgba(55, 55, 55, 0.2);
   width: 280px;
   margin-left: -1px;
 }
 
-.po-flex > div.po-div > .grid-bottom {
+.po-flex .po-div > .grid-bottom {
   display: grid;
   grid-template-columns: 45px 305px 390px 180px;
   grid-template-rows: 45px 130px 130px 130px;

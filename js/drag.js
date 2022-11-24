@@ -36,19 +36,24 @@ for (let i = 0; i < hoverForMore.length; i++) {
 // Fill the textarea
 const poSubmit = document.querySelector("#po-submit");
 const poTextArea = document.querySelector("#po-textarea");
-const dynamicTask = document.querySelector("#dynamic-task");
-function poTextarea() {
+const dynamicText = document.querySelector("#dynamic-task");
+const poNextBTN = document.querySelector("#po-next-btn");
+
+function poTextAreaF() {
   poSubmit.classList.remove("disable");
   poSubmit.disabled = false;
 }
 function havePoText() {
-  if (dynamicTask.value == "") {
+  if (poTextArea.value == "") {
     poSubmit.classList.add("disable");
     poSubmit.disabled = true;
   }
 }
 function poSubmitFunc() {
-  dynamicTask.innerText = poTextArea.value;
+  dynamicText.innerText = poTextArea.value;
+  poSubmit.classList.add("display-none");
+  poNextBTN.classList.remove("disable");
+  poTextArea.disabled = true;
   turnNextPage(4);
 }
 
@@ -111,9 +116,8 @@ function scrumSubmit() {
   }
 
   if (scrumResult == true) {
-    console.log("you success");
+    turnNextPage(5);
   } else {
-    console.log("you faild");
     resetScrumPriority();
     scrumResult = true;
   }
