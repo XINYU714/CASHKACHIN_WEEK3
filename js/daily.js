@@ -80,7 +80,6 @@ function checkDailyAns()
     });
    if(ans==8)
    {
-
     clickActive=false;
     const removeDrag=document.querySelectorAll('.card');
     for(let i=0;i<removeDrag.length;i++)
@@ -90,11 +89,10 @@ function checkDailyAns()
     turnNextPage(6);
     resetdailyBtn.classList.add('display-none');
     ctadailyBtn.classList.add('display-none');
-    nextBtn[4].classList.remove('disable');
-    nextBtn[4].onclick=()=>turnNextPage(6);
-    //put next page
+    nextBtn[4].disabled = false;
    }
    else{
     resetDailyList();
+    wrongAnswer(2);
    }
 }

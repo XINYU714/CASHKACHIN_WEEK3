@@ -8,14 +8,14 @@ let momoActive=false;
 //memo pos
 let notes=[
 {"top":"20px","left":"10px"},
-{ "top":"30px","left":"134px"},
-{"top":"15px","left":"256px"},
-{"top":"165px","left":"10px"},
+{"top":"30px","left":"134px"},
+{"top":"15px","left":"250px"},
+{"top":"165px","left":"15px"},
 {"top":"170px","left":"134px"},
 {"top":"155px","left":"256px"},
 {"top":"285px","left":"10px" },
 {"top":"295px","left":"134px"},
-{"top":"270px","left":"256px"},
+{"top":"270px","left":"254px"},
 ]
 const initialNote=document.querySelectorAll('.memo-container .memo'); 
 for(let i=0;i<memo.length;i++)
@@ -30,14 +30,26 @@ for(let i=0;i<memo.length;i++)
         element.addEventListener('dragend',(event)=>{
            memoDragging[i].style.opacity = '1';
            activeRetroBtn();
+           memoDragging = [null,null,null];
        });
    });
     memoContainer[i].addEventListener('dragover', (event)=>{
     event.preventDefault();
+   });
+   memoContainer[i].addEventListener('drop', (event)=>{
+    event.preventDefault();
     memoContainer[i].appendChild(memoDragging[i]);
     memoDragging[i].style.position="static";
    });
-memoDragging = [null,null,null];
+   missionContainer.addEventListener('dragover', (event)=>{
+    event.preventDefault();
+   });
+   missionContainer.addEventListener('drop', (event)=>{
+    event.preventDefault();
+    missionContainer.appendChild(memoDragging[i]);
+    memoDragging[i].style.position="absolute";
+   });
+    memoDragging = [null,null,null];
 
 }
 initialPos();
@@ -100,11 +112,10 @@ function checkRetroAns()
     });
     if(checkPoint1==4 && checkPoint2==9 && checkPoint3==16)
     {
-        console.log('excellent');
         turnNextPage(8);
     }
     else{
-        console.log('oh no');
+        wrongAnswer(3);
         resetMemo();
     }
 
