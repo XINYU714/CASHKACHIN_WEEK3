@@ -52,7 +52,7 @@ function havePoText() {
 function poSubmitFunc() {
   dynamicText.innerText = poTextArea.value;
   poSubmit.classList.add("display-none");
-  poNextBTN.classList.remove("disable");
+  poNextBTN.disabled = false;
   poTextArea.disabled = true;
   turnNextPage(4);
 }
@@ -98,9 +98,9 @@ function countIssue() {
 }
 
 countIssue();
-let scrumResult = true;
+let scrumResult = 2;
 function scrumSubmit() {
-  if ((scrumMasterContainer[1].childElementCount = 5)) {
+  if (scrumMasterContainer[1].childElementCount == 5) {
     let testPriority = [];
     document.querySelectorAll(".priority-no").forEach((no) => {
       testPriority.push(Number(no.innerText));
@@ -108,19 +108,26 @@ function scrumSubmit() {
 
     testPriority.forEach((test, i, arr) => {
       if (test < arr[i + 1]) {
-        scrumResult = false;
+        scrumResult = 1;
       }
     });
   } else {
-    scrumResult = false;
-    wrongAnswer(0);
+    scrumResult = 0;
   }
 
-  if (scrumResult == true) {
+  if (scrumResult == 2) {
     turnNextPage(5);
+    submitBTN.classList.add("display-none");
+    document.querySelector("#scrum-next-btn").disabled = false;
+    resetBTN.classList.add("disable");
+    resetBTN.disabled = true;
+    scrumMasterTask.forEach((div) => {
+      div.draggable = false;
+    });
   } else {
     resetScrumPriority();
-    scrumResult = true;
+    wrongAnswer(scrumResult);
+    scrumResult = 2;
   }
 }
 
