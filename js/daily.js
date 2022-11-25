@@ -22,12 +22,28 @@ dailyDraggable.forEach(dragelement=>{
         container.addEventListener('dragover', (event)=>{
             event.preventDefault();
             event.stopPropagation();
+            // const draggable=document.querySelector('.dragging');
             container.appendChild(dailyDragging);
+
         
         });
     });
 
     });
+function getDragAfterElement(container,y)
+{
+    const draggableElements=[...container.querySelector('.draggable:not(.dragging)')];
+    return draggableElements.reduce((closest,child)=>{
+        const dragbox=child.getBoundingClientRect();
+        const offset=y - dragbox.top - dragbox.height / 2;
+        if(offset<0 && offset> closest.offset)
+        {
+            return{offset:offset,element:child}
+        }else{
+            return closest
+        }
+    },{offset:Number.POSITIVE_INFINITY})
+}
 countCard();
 function countCard()
 {

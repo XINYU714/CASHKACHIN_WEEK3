@@ -144,7 +144,7 @@ p {
 .container .inner-wrap {
   display: flex;
   scroll-behavior: smooth;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: fit-content;
 }
 .container section {
@@ -224,7 +224,7 @@ button.reset:not(.disable):hover {
   transition: backgrounnd-color 0.3s ease;
 }
 :not([draggable="true"]),
-[draggable="true"] {
+[draggable="true"],img{
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -232,10 +232,6 @@ button.reset:not(.disable):hover {
 }
 [draggable="false"]{
   cursor: unset !important;
-}
-
-.display-none {
-  display: none;
 }
 .screen-max
 {
@@ -248,8 +244,14 @@ button.reset:not(.disable):hover {
   justify-content: center;
   align-items: center;
   text-align: left;
-  color: #FEEC71;
   z-index: 100;
   position: fixed;
   top: 0;
+}
+.screen-max p{
+  color: #FEEC71;
+  max-width: 340px;
+}
+.display-none {
+  display: none;
 }
