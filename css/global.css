@@ -16,6 +16,10 @@ html {
   --primary-green: #333333;
   --primary-white: #ffffff;
   --secondary-color: #373737;
+  --secondary-color-60:rgba(55, 55, 55, 0.6);
+  --secondary-color-40:rgba(55, 55, 55, 0.4);
+  --secondary-color-20:rgba(55, 55, 55, 0.2);
+  --secondary-color-05:rgba(55, 55, 55, 0.05);
 }
 h1,
 h2,
@@ -31,9 +35,9 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  letter-spacing: 0.02em;
   color: var(--secondary-color);
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.02em;
 }
 button {
   background: unset;
@@ -108,6 +112,7 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+
 }
 .p-12 {
   font-weight: 400;
@@ -154,10 +159,7 @@ p {
   border-radius: 30px;
   padding: 40px 40px 0;
   background-color: var(--primary-white);
-  /* min-height: 960px; */
   height: 960px;
-  /* height: 100vh; */
-  /* position: absolute; */
   position: relative;
   overflow: hidden;
   transition: 0.8s;
@@ -176,7 +178,7 @@ section > p {
   font-size: 16px;
   line-height: 24px;
   border: 1px solid transparent;
-  box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
+  box-shadow: 0px 4px 2px var(--secondary-color-40);
   border-radius: 200px;
   transition: 0.3s;
   cursor: pointer;
@@ -237,7 +239,7 @@ button.reset:not(.disable):hover {
 {
   width: 100vw;
   height: 100vh;
-  background: rgba(55, 55, 55, 0.6);
+  background: var(--secondary-color-60);
   backdrop-filter: blur(20px);
   display: flex;
   gap: 20px;

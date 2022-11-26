@@ -1,7 +1,7 @@
 // Fill User Name
 const nameForm = document.querySelector("#name-button");
 const userInput = document.querySelector("#user_name");
-
+let undragItem=['.card:not(.dragging)','.tasks:not(.dragging)'];
 function startFillName() {
   nameForm.classList.remove("name-disable");
   nameForm.disabled = false;
@@ -15,7 +15,7 @@ function haveName() {
 function fillUserName() {
   document.getElementById("fill-user-name").innerText = document.getElementById(
     "fill-user-name-last"
-  ).innerText = userInput.value;
+  ).innerText = userInput.value +'.';
   turnNextPage(1);
 }
 
@@ -70,18 +70,29 @@ let dragged = null;
 
 scrumMasterTask.forEach((drag) => {
   drag.addEventListener("dragstart", (event) => {
-    dragged = event.target;
-    dragged.style.opacity = "0.5";
+    // dragged = event.target;
+    event.stopPropagation();
+    // dragged.style.opacity = "0.5";
+    drag.classList.add('dragging');
   });
   drag.addEventListener("dragend", (event) => {
-    dragged.style.opacity = "1";
+    // dragged.style.opacity = "1";
     // sprintPlanningComplete();
+    drag.classList.remove('dragging');
     countIssue();
   });
   scrumMasterContainer.forEach((container) => {
     container.addEventListener("dragover", (event) => {
       event.preventDefault();
-      container.appendChild(dragged);
+      event.stopPropagation();
+      // container.appendChild(dragged);
+      const afterElement = getDragAfterElement(container, event.clientY,undragItem[1]);
+      const draggable = document.querySelector('.dragging');
+      if (afterElement == null) {
+          container.appendChild(draggable);
+        } else {
+          container.insertBefore(draggable, afterElement);
+        }
     });
   });
 });

@@ -23,7 +23,7 @@ for(let i=0;i<memo.length;i++)
     memo[i].forEach(element => {
          element.addEventListener('dragstart',(event)=>{
             memoDragging[i] = event.target;
-            memoDragging[i].style.opacity = '0.2';
+            memoDragging[i].style.opacity = '0.5';
         });
     });
     memo[i].forEach(element => {

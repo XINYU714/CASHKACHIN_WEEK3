@@ -5,45 +5,54 @@ const dailyListText=document.querySelectorAll('.list-title h2');
 //btn
 const resetdailyBtn=document.getElementById('daily-reset');
 const ctadailyBtn=document.getElementById('daily-cta-btn');
-let dailyDragging = null;
 let clickActive=false;
 //daily drag event
 dailyDraggable.forEach(dragelement=>{
-    dragelement.addEventListener('dragstart',(event)=>{
-        dailyDragging = event.target;
-        dailyDragging.style.opacity = '0.2';
+    dragelement.addEventListener('dragstart',()=>{
+        // dragelement = event.target;
+        dragelement.classList.add('dragging');
     });
-    dragelement.addEventListener('dragend',(event)=>{
-        dailyDragging.style.opacity = '1';
+    dragelement.addEventListener('dragend',()=>{
+        // dragelement.style.opacity = '1';
+        dragelement.classList.remove('dragging');
+
         countCard();
         activeBtn();
     });
+
     dailyDragContainer.forEach(container => {
         container.addEventListener('dragover', (event)=>{
             event.preventDefault();
-            event.stopPropagation();
-            // const draggable=document.querySelector('.dragging');
-            container.appendChild(dailyDragging);
+            const afterElement = getDragAfterElement(container, event.clientY,undragItem[0]);
+            
+            const draggable = document.querySelector('.dragging');
+
+            if (afterElement == null) {
+                container.appendChild(draggable);
+              } else {
+                container.insertBefore(draggable, afterElement);
+              }
+            
 
         
         });
     });
 
     });
-function getDragAfterElement(container,y)
-{
-    const draggableElements=[...container.querySelector('.draggable:not(.dragging)')];
-    return draggableElements.reduce((closest,child)=>{
-        const dragbox=child.getBoundingClientRect();
-        const offset=y - dragbox.top - dragbox.height / 2;
-        if(offset<0 && offset> closest.offset)
-        {
-            return{offset:offset,element:child}
-        }else{
+    
+    function getDragAfterElement(container, y,undragitem) {
+        const draggableElements = [...container.querySelectorAll(undragitem)];
+        return draggableElements.reduce((closest, child) => {
+          const box = child.getBoundingClientRect();
+          const offset = y - box.top - box.height / 2;
+          if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child }
+          } else {
             return closest
-        }
-    },{offset:Number.POSITIVE_INFINITY})
-}
+          }
+      
+        }, { offset: Number.NEGATIVE_INFINITY }).element
+      }
 countCard();
 function countCard()
 {
