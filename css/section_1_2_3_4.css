@@ -43,6 +43,7 @@
 
 .opening-flex div h4 {
   margin-left: 45px;
+  font-weight: 600;
 }
 
 .opening-flex input[type="text"] {
@@ -468,4 +469,14 @@ section.planning {
 }
 .planning > div.planning-div > .plan-mission {
   padding-top: 10px;
+}
+.plan-mission-title {
+  font-weight: 600;
+}
+
+.mission-pri {
+  display: inline-block;
+  background: rgba(55, 55, 55, 0.2);
+  border-radius: 20px;
+  padding: 2px 10px;
 }
