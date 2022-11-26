@@ -45,6 +45,7 @@ let newContent = document.createElement('p');
 newContent.textContent="You have to use a device with over 1200 pixels to have a better experience.";
 screen.classList.add('screen-max', 'display-none');
 newContent.classList.add('h4');
+window.onload=()=>resizeScreen();
 window.onresize=()=>resizeScreen();
 screen.appendChild(img);
 screen.appendChild(newContent);
