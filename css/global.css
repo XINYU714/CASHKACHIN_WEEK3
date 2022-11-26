@@ -54,6 +54,7 @@ button {
 }
 .arrow-btn:disabled {
   position: relative;
+  cursor: not-allowed;
 }
 .arrow-btn:disabled svg {
   opacity: 0.4;

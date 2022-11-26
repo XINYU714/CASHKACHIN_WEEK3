@@ -40,7 +40,7 @@ function getDragAfterElement(container, y, undragitem) {
 }
 const screen = document.createElement('div');
 const img = document.createElement('img');
-img.src="../src/computer.svg";
+img.src="./src/computer.svg";
 let newContent = document.createElement('p');
 newContent.textContent="You have to use a device with over 1200 pixels to have a better experience.";
 screen.classList.add('screen-max', 'display-none');
