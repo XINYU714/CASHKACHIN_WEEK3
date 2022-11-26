@@ -69,10 +69,10 @@ button {
   padding: 10px 20px;
   color: var(--secondary-color);
   background: #ffffff;
-  border: 1px solid #373737;
+  border: 1px solid var(--secondary-color);
   max-width: 300px;
   width: 300px;
-  box-shadow: 0px 4px 2px rgba(55, 55, 55, 0.4);
+  box-shadow: 0px 4px 2px var(--secondary-color-40);
   border-radius: 20px;
   top: 60px;
   right: 0;
@@ -83,7 +83,6 @@ button {
   opacity: 1;
   transition: 0.5s;
 }
-
 .arrow-btn:not(:disabled):hover svg rect:last-child {
   stroke: transparent;
   transition: 0.5s;
@@ -112,7 +111,6 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-
 }
 .p-12 {
   font-weight: 400;
@@ -126,17 +124,15 @@ p {
 }
 /* section  */
 .container {
-  background-image: url("../src/scrum-bg.webp");
+  background: url("../src/scrum-bg.webp") center no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; 
   padding: 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1080px;
   flex-direction: column;
+  min-height: 1080px;
   overflow: hidden;
 }
 .container .outer-wrap {
@@ -149,7 +145,6 @@ p {
 .container .inner-wrap {
   display: flex;
   scroll-behavior: smooth;
-  /* flex-direction: column; */
   width: fit-content;
 }
 .container section {
@@ -174,9 +169,10 @@ section > p {
 .cta-button {
   padding: 20px 40px;
   background-color: var(--primary-purple);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0.02em;
   border: 1px solid transparent;
   box-shadow: 0px 4px 2px var(--secondary-color-40);
   border-radius: 200px;
@@ -219,6 +215,7 @@ button.reset {
 }
 button.reset.disable {
   opacity: 0.4;
+  cursor: not-allowed;
 }
 button.reset:not(.disable):hover {
   background-color: var(--primary-purple);
@@ -256,4 +253,7 @@ button.reset:not(.disable):hover {
 }
 .display-none {
   display: none;
+}
+.dragging{
+  opacity: 0.5;
 }
