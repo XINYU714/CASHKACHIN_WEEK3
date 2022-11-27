@@ -8,6 +8,6 @@ WEEK 3 - Scrum 新手村
 * Drag and Drop API
 ## Struct
 * index.html:landing page
-* scr:image
+* src:image
 * css: css file
 * js :js file
