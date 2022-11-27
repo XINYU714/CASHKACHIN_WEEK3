@@ -16,10 +16,10 @@ html {
   --primary-green: #333333;
   --primary-white: #ffffff;
   --secondary-color: #373737;
-  --secondary-color-60:rgba(55, 55, 55, 0.6);
-  --secondary-color-40:rgba(55, 55, 55, 0.4);
-  --secondary-color-20:rgba(55, 55, 55, 0.2);
-  --secondary-color-05:rgba(55, 55, 55, 0.05);
+  --secondary-color-60: rgba(55, 55, 55, 0.6);
+  --secondary-color-40: rgba(55, 55, 55, 0.4);
+  --secondary-color-20: rgba(55, 55, 55, 0.2);
+  --secondary-color-05: rgba(55, 55, 55, 0.05);
 }
 h1,
 h2,
@@ -127,7 +127,7 @@ p {
 .container {
   background: url("../src/scrum-bg.webp") center no-repeat;
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   padding: 60px 0;
   display: flex;
   justify-content: center;
@@ -166,6 +166,7 @@ section > p {
 }
 .cta-button.disable {
   opacity: 0.4;
+  cursor: not-allowed;
 }
 .cta-button {
   padding: 20px 40px;
@@ -224,17 +225,17 @@ button.reset:not(.disable):hover {
   transition: backgrounnd-color 0.3s ease;
 }
 :not([draggable="true"]),
-[draggable="true"],img{
+[draggable="true"],
+img {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-[draggable="false"]{
+[draggable="false"] {
   cursor: unset !important;
 }
-.screen-max
-{
+.screen-max {
   width: 100vw;
   height: 100vh;
   background: var(--secondary-color-60);
@@ -248,13 +249,13 @@ button.reset:not(.disable):hover {
   position: fixed;
   top: 0;
 }
-.screen-max p{
-  color: #FEEC71;
+.screen-max p {
+  color: #feec71;
   max-width: 340px;
 }
 .display-none {
   display: none;
 }
-.dragging{
+.dragging {
   opacity: 0.5;
 }
